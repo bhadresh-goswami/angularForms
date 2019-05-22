@@ -1,0 +1,7 @@
+<form [formGroup]="profileForm">
+  First Name:
+  <input class="form-control" type="text" formControlName="firstName" />
+  Last Name
+  <input class="form-control" type="text" formControlName="lastName" /><br>
+  <button class="btn btn-primary" (click)="onSubmit()" [disabled]="!profileForm.valid">Submit!</button>
+</form>

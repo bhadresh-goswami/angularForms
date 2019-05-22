@@ -1,0 +1,14 @@
+<form>
+  <div class="form-group">
+    <label class="control-label">
+      Enter Text
+    </label>
+    <input type="text" [(ngModel)]="demo" name="demo" id="demo" class="form-control" #demo1="ngModel" required />
+  </div>
+  <!-- {{demo1.valid}}<br>
+        {{demo1.pristine}}<br>
+        {{demo1.dirty}} -->
+  <div class="alert alert-danger" [hidden]="demo1.valid && demo1.dirty">
+    Demo Text is Required!
+  </div>
+</form>
